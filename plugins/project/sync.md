@@ -1,20 +1,19 @@
 ### SFTP
 在 Win下用 Xftp 和 WinScp，被这种需要切换点击 or F5 刷新的手动操作蛋疼到无语；故此一遇见这 SFTP，顿觉这世界都美好了许多。
 
-当然 Sublime 下面也类似功能的其他同步插件，比如 FtpSnyc，但是配置起来的错误提示一点都不人性化，就毫不留情的舍弃了。
-
-Sublime下有 SFTP，只要 Ctrl+S 即可同步本地到服务器，妥妥的爽歪歪有么有？
+On windows, we ususally use Xftp and WinScp to sync file between remote and local, and the most inconvenient part is we need to switch between them and mannualy press F5 to refresh. This cumbersome work changes greatly after SFTP comes to rescue, simple press `ctrl + s` will sync local files to remote server.
 
 please refer to: [Use SFTP in Sublime Text](blog.wpjam.com/m/sublime-text-2-sftp/)
 
-如欲使用 FtpSync 可参见 [Sublime使用及FtpSync远程同步](http://liuwanlin.info/sublimeshi-yong-ji-ftpsyncyuan-cheng-tong-bu/)；大道至简，因简而悦；开心垒码，值得折腾。
 
 ### FTPSync
+FtpSnyc is a sublime plugin to facilitate the sync job, but the configuration is a bit trival and not easy to go.
 
-我个人喜欢把密码设为 null 因为我不想让我的密码出现在配置文件中。这样 FTPSync 会在我每次保存完文件后要求我输入密码。
+Here is a reference on [how to use FTPSync in sublime](http://liuwanlin.info/sublimeshi-yong-ji-ftpsyncyuan-cheng-tong-bu/)
 
+I like to set password to null because I don't want to expose my password literally in config files. In that case, FTPSync asks me to type in password every time I save my files.
 
-### rsync
+### Rsync
 We can create a new build system in sublime text to utilize the rsync, then when we type `CMD + B` to execute the build, it will call rsync to sync our files to remote server.
 
 
